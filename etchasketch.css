@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  .container {
+    width:100vw;
+   /* height:960px; */
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+   .divc {
+    border: 1px solid black;
+    aspect-ratio: 1/1 ;
+  
+  
+  }

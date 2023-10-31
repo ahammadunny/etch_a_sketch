@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="etchasketch.css" /> 
+    <title>Etch-a-Sketch</title>
+   <script src="etchasketch.js"> </script>
+   <!-- <style>
+        * {
+  box-sizing: border-box;
+}
+
+.container {
+  width:100vw;
+ /* height:960px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ .divc {
+  border: 1px solid black;
+  aspect-ratio: 1/1 ;
+
+
+}
+
+    </style>
+  -->
+</head>
+<body>
+  <div class="container"></div>
+  <Input Number : <input id="numberinput" type="number" />
+  <p> enter a number between 1 and 30</p>
+ <!-- <button id="myButton" onclick="doAction()" > -->
+      <button id="myButton">
+  Send
+  </button>
+  <p> 1.to color a square move the mouse over it </p>
+  <p> 2.to increase the brightness press the right mouse key. </p>
+  <p> 3.to darken the color press the left mouse key.</p>
+   <!--
+   <script  >
+    function doAction() {
+    const btnclick= document.querySelector('#btn');
+    const input = document.getElementById('numberinput');
+    let x = input.value;
+    let text;
+    if(isNaN(x) || x <1 || x >30) {
+      alert("input not valid");
+      return false;
+    } else {
+      alert( " number of squares per side is "+x);
+    }
+    
+    var time = parseInt(input.value);
+    var times=time*time;
+    const darkenSquare = (e) => {
+    let currentBrightness = e.target.dataset.brightness || 100;
+    currentBrightness = parseInt(currentBrightness) - 10;
+    if (currentBrightness >= 0) { 
+        e.target.style.filter = `brightness(${currentBrightness}%)`;
+        e.target.dataset.brightness = currentBrightness;
+    }  
+};
+
+const lightenSquare = (e) => {
+    let currentBrightness = e.target.dataset.brightness || 100;
+    currentBrightness = parseInt(currentBrightness) + 10;
+
+   if (currentBrightness <= 100) { 
+        e.target.style.filter = `brightness(${currentBrightness}%)`;
+        e.target.dataset.brightness = currentBrightness;
+    } 
+};
+
+    const cdiv = document.querySelector('.container');
+    cdiv.replaceChildren();
+    for(var i = 1; i < times+1; i++) {
+      var  div = document.createElement('div');
+      div.innerText=i;
+      div.classList.add('divc');
+      div.style.flexBasis=100/time + '%';
+     div.addEventListener('mouseover', (e) => {
+    var x = Math.floor(Math.random() * 256);
+    var y = Math.floor(Math.random() * 256);
+    var z = Math.floor(Math.random() * 256);
+    var bgColor = "rgb(" + x + "," + y + "," + z + ")";
+      e.target.style.background = bgColor;
+     /* e.target.style.filter=`brightness(10%)`; */
+    })
+   div.addEventListener('click', darkenSquare); 
+   div.addEventListener('contextmenu', (event) => {
+    event.preventDefault();
+    lightenSquare(event);
+});
+      cdiv.appendChild(div);
+    
+    }
+
+  }
+
+  </script>
+-->
+</body>
+</html>
